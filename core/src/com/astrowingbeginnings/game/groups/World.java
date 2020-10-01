@@ -3,7 +3,6 @@ package com.astrowingbeginnings.game.groups;
 import com.astrowingbeginnings.game.Direction;
 import com.astrowingbeginnings.game.GameScreen;
 import com.astrowingbeginnings.game.groups.tiles.Area;
-import com.astrowingbeginnings.game.groups.tiles.Ship;
 import com.astrowingbeginnings.game.groups.tiles.ships.Arwing;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Group;
@@ -19,7 +18,7 @@ public class World extends Group
     private static final int        HEIGHT_IN_TILES = 8;
     public final         GameScreen GAME_SCREEN;
     private final        Area[][]   AREAS;
-    private final        Ship       SHIP;
+    private final        Arwing     ARWING;
 
     // =====================================================
     // CONSTRUCTORS
@@ -36,7 +35,7 @@ public class World extends Group
                 addActor(area);
             }
         }
-        SHIP = new Arwing(AREAS[3][3]);
+        ARWING = new Arwing(AREAS[3][3]);
         setPosition(Tile.WIDTH_IN_PIXELS / 2f, Tile.HEIGHT_IN_PIXELS / 2f);
     }
 
@@ -61,11 +60,11 @@ public class World extends Group
 
     public void play()
     {
-        SHIP.play();
+        ARWING.play();
     }
 
     public void stop()
     {
-        SHIP.stop();
+        ARWING.stop();
     }
 }
