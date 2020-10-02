@@ -31,8 +31,9 @@ public class Arwing extends Ship
      * Verfügung:
      * move() - Bewegt den Arwing ein Feld in Flugrichtung nach vorn
      * turnLeft() - Dreht den Arwing um 90° nach links
+     * broadcast() -
      */
-    @Override public void setCourse()
+    @Override public void run()
     {
 
     }

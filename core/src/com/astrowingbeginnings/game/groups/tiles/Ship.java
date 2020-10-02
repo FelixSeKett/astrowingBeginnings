@@ -31,7 +31,7 @@ public abstract class Ship extends Tile
         takeArea(area);
         takeSightDirection(Direction.UP);
         sequenceAction = new SequenceAction();
-        setCourse();
+        run();
         removeSequenceAction();
     }
 
@@ -95,22 +95,23 @@ public abstract class Ship extends Tile
         broadcast("");
     }
 
-    public void broadcast(final String STRING)
+    public void broadcast(final Object OBJECT)
     {
         RunnableAction runnableAction = new RunnableAction()
         {
             @Override public void run()
             {
                 String name = Ship.this.toString();
+                String message = OBJECT.toString();
                 String position = area.COLUMN + "-" + area.ROW;
-                Gdx.app.log(name + " at " + position, STRING);
+                Gdx.app.log(name + " at " + position, message);
             }
         };
         sequenceAction.addAction(runnableAction);
         delay();
     }
 
-    public abstract void setCourse();
+    public abstract void run();
 
     private void removeSequenceAction()
     {
