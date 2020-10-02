@@ -3,6 +3,7 @@ package com.astrowingbeginnings.game.groups.tiles;
 import com.astrowingbeginnings.game.Direction;
 import com.astrowingbeginnings.game.games.AstrowingBeginnings;
 import com.astrowingbeginnings.game.groups.Tile;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.DelayAction;
 import com.badlogic.gdx.scenes.scene2d.actions.RunnableAction;
@@ -83,6 +84,26 @@ public abstract class Ship extends Tile
             {
                 Direction newSightDirection = sightDirection.giveNextDirectionClockwise();
                 takeSightDirection(newSightDirection);
+            }
+        };
+        sequenceAction.addAction(runnableAction);
+        delay();
+    }
+
+    public void broadcast()
+    {
+        broadcast("");
+    }
+
+    public void broadcast(final String STRING)
+    {
+        RunnableAction runnableAction = new RunnableAction()
+        {
+            @Override public void run()
+            {
+                String name = Ship.this.toString();
+                String position = area.COLUMN + "-" + area.ROW;
+                Gdx.app.log(name + " at " + position, STRING);
             }
         };
         sequenceAction.addAction(runnableAction);
