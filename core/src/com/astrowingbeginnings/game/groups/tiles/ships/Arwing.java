@@ -31,7 +31,8 @@ public class Arwing extends Ship
      * Verfügung:
      * move() - Bewegt den Arwing ein Feld in Flugrichtung nach vorn
      * turnLeft() - Dreht den Arwing um 90° nach links
-     * broadcast() -
+     * broadcast() - Konsolenausgabe der gegenwärtigen Koordinaten
+     * broadcast(TEXT) - Konsolenausgabe der gegenwärtigen Koordinaten und einer zusätzlichen Textnachricht
      */
     @Override public void run()
     {
