@@ -4,6 +4,8 @@ import com.astrowingbeginnings.game.GameScreen;
 import com.astrowingbeginnings.game.groups.tiles.Area;
 import com.astrowingbeginnings.game.groups.tiles.Ship;
 
+import java.util.Random;
+
 public class Arwing extends Ship
 {
     // =====================================================
