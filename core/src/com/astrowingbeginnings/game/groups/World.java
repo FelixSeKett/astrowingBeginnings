@@ -13,7 +13,7 @@ public class World extends Group
     // FIELDS
     // =====================================================
 
-    static final         Texture    TEXTURE         = new Texture("core/assets/map.png");
+    public static final  Texture    TEXTURE         = new Texture("core/assets/map.png");
     private static final int        WIDTH_IN_TILES  = 8;
     private static final int        HEIGHT_IN_TILES = 8;
     public final         GameScreen GAME_SCREEN;

@@ -83,6 +83,8 @@ public class GameScreen implements Screen
 
     @Override public void dispose()
     {
+        World.TEXTURE.dispose();
+        Hud.TEXTURE.dispose();
     }
 
     public void play()
