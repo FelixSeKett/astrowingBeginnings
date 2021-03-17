@@ -12,7 +12,7 @@ public class AstrowingBeginnings extends Game
     // =====================================================
 
     public static final boolean DEBUG            = true;
-    public static final int     SPEED_MULTIPLIER = 1;
+    public static final int     SPEED_MULTIPLIER = 5;
 
     // =====================================================
     // METHODS

@@ -4,8 +4,6 @@ import com.astrowingbeginnings.game.GameScreen;
 import com.astrowingbeginnings.game.groups.tiles.Area;
 import com.astrowingbeginnings.game.groups.tiles.Ship;
 
-import java.util.Random;
-
 public class Arwing extends Ship
 {
     // =====================================================
@@ -28,15 +26,17 @@ public class Arwing extends Ship
     // =====================================================
 
     /**
-     * Diese Methode beinhaltet alle Anweisungen für den Autopiloten. Beim {@link GameScreen#play() Spielstart}
-     * werden diese in der Reihenfolge abgearbeitet, in der sie eingetragen wurden. Folgende Anweisungen stehen zur
-     * Verfügung:
+     * Diese Methode beinhaltet alle Anweisungen für den Autopiloten. Beim
+     * {@link GameScreen#play() Spielstart} werden diese in der Reihenfolge abgearbeitet, in der
+     * sie eingetragen wurden. Folgende Anweisungen stehen zur Verfügung:
      * move() - Bewegt den Arwing ein Feld in Flugrichtung nach vorn
      * turnLeft() - Dreht den Arwing um 90° nach links
      * broadcast() - Konsolenausgabe der gegenwärtigen Koordinaten
-     * broadcast(TEXT) - Konsolenausgabe der gegenwärtigen Koordinaten und einer zusätzlichen Textnachricht
+     * broadcast(TEXT) - Konsolenausgabe der gegenwärtigen Koordinaten und einer zusätzlichen
+     * Textnachricht
      */
-    @Override public void run()
+    @Override
+    public void run()
     {
 
     }

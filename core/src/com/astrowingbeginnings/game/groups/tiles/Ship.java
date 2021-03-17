@@ -66,7 +66,8 @@ public abstract class Ship extends Tile
     {
         RunnableAction runnableAction = new RunnableAction()
         {
-            @Override public void run()
+            @Override
+            public void run()
             {
                 Area newArea = area.WORLD.giveArea(area, sightDirection);
                 moveToArea(newArea);
@@ -80,7 +81,8 @@ public abstract class Ship extends Tile
     {
         RunnableAction runnableAction = new RunnableAction()
         {
-            @Override public void run()
+            @Override
+            public void run()
             {
                 Direction newSightDirection = sightDirection.giveNextDirectionClockwise();
                 takeSightDirection(newSightDirection);
@@ -99,10 +101,11 @@ public abstract class Ship extends Tile
     {
         RunnableAction runnableAction = new RunnableAction()
         {
-            @Override public void run()
+            @Override
+            public void run()
             {
-                String name = Ship.this.toString();
-                String message = OBJECT.toString();
+                String name     = Ship.this.toString();
+                String message  = OBJECT.toString();
                 String position = area.COLUMN + "-" + area.ROW;
                 Gdx.app.log(name + " at " + position, message);
             }
@@ -117,7 +120,8 @@ public abstract class Ship extends Tile
     {
         RunnableAction runnableAction = new RunnableAction()
         {
-            @Override public void run()
+            @Override
+            public void run()
             {
                 sequenceAction = null;
             }
